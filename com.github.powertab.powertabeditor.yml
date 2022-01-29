@@ -80,7 +80,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/powertab/powertabeditor.git
-        tag: 2.0.0-alpha16
-        commit: 7934924a8753c77cfd1ebec716d55dfefa6a10ef
+        tag: 2.0.0-alpha17
+        commit: 78d0237c9779d68c0448bdc448d9f224f21764bb
     post-install:
       - mv /app/share/mime/packages/powertabeditor.xml /app/share/mime/packages/com.github.powertab.powertabeditor.xml
