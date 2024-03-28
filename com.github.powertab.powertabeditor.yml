@@ -1,10 +1,11 @@
 app-id: com.github.powertab.powertabeditor
 runtime: org.kde.Platform
-runtime-version: '5.15-22.08'
+runtime-version: '5.15-23.08'
 sdk: org.kde.Sdk
 command: powertabeditor
 rename-desktop-file: powertabeditor.desktop
 rename-appdata-file: powertabeditor.metainfo.xml
+rename-mime-file: powertabeditor.xml
 rename-icon: powertabeditor
 finish-args:
   # Standard Qt stuff.
@@ -79,5 +80,5 @@ modules:
         url: https://github.com/powertab/powertabeditor.git
         tag: 2.0.0-alpha19
         commit: 48acb0be8e6e7fbe32fc04be926db82230592d2c
-    post-install:
-      - mv /app/share/mime/packages/powertabeditor.xml /app/share/mime/packages/com.github.powertab.powertabeditor.xml
+      - type: patch
+        path: powertabeditor-appdata.patch
