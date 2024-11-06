@@ -1,16 +1,18 @@
 diff --git a/xdg/powertabeditor.metainfo.xml b/xdg/powertabeditor.metainfo.xml
-index b850626d..e39d9a64 100644
+index b850626d..d74e071e 100644
 --- a/xdg/powertabeditor.metainfo.xml
 +++ b/xdg/powertabeditor.metainfo.xml
-@@ -4,6 +4,7 @@
+@@ -4,6 +4,9 @@
    
    <name>Power Tab Editor</name>
    <summary>View and edit guitar tablature</summary>
-+  <developer>Power Tab Developers</developer>
++  <developer id="com.github.powertab">
++    <name>Power Tab Developers</name>
++  </developer>
    
    <metadata_license>FSFAP</metadata_license>
    <project_license>GPL-3.0-or-later</project_license>
-@@ -126,13 +127,9 @@
+@@ -126,13 +129,9 @@
          </ul>
          <p>Changes</p>
          <ul>
@@ -27,7 +29,7 @@ index b850626d..e39d9a64 100644
            <li>Several changes to the `.pt2` JSON format to make it easier for other applications to parse (#368). Note that older releases will likely be unable to open newly-saved `.pt2` files</li>
          </ul>
          <p>Bug Fixes</p>
-@@ -148,28 +145,19 @@
+@@ -148,28 +147,19 @@
        <description>
          <p>New Features / Improvements</p>
          <ul>
