@@ -78,7 +78,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/powertab/powertabeditor.git
-        tag: 2.0.20
-        commit: eff05f07de5f4adfc3ab738556ce7e7ea5b5355c
-      - type: patch
-        path: powertabeditor-appdata.patch
+        tag: 2.0.21
+        commit: 59302ebc087d9e851178bad78dd536570f553732
