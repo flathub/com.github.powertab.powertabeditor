@@ -1,6 +1,6 @@
 app-id: com.github.powertab.powertabeditor
 runtime: org.kde.Platform
-runtime-version: '6.7'
+runtime-version: '6.9'
 sdk: org.kde.Sdk
 command: powertabeditor
 rename-desktop-file: powertabeditor.desktop
@@ -78,5 +78,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/powertab/powertabeditor.git
-        tag: 2.0.21
-        commit: 59302ebc087d9e851178bad78dd536570f553732
+        tag: 2.0.22
+        commit: 13cab27c7127d301f2747671071e53eb203dc940
+        x-checker-data:
+          type: git
+          tag-pattern: "^([\\d.]+)$"
