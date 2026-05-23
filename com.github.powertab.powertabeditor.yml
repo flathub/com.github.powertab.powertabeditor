@@ -1,6 +1,6 @@
 app-id: com.github.powertab.powertabeditor
 runtime: org.kde.Platform
-runtime-version: '6.9'
+runtime-version: '6.10'
 sdk: org.kde.Sdk
 command: powertabeditor
 rename-desktop-file: powertabeditor.desktop
@@ -12,8 +12,8 @@ finish-args:
   - --share=ipc
   - --socket=fallback-x11
   - --socket=wayland
-  # For MIDI devices
-  - --device=all
+  - --device=dri
+  - --socket=pulseaudio
   # Jack
   - --filesystem=xdg-run/pipewire-0
 cleanup:
@@ -48,6 +48,7 @@ modules:
     buildsystem: cmake-ninja
     config-opts:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: git
         url: https://github.com/zeux/pugixml.git
@@ -59,6 +60,7 @@ modules:
     config-opts:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       - -DJSON_BuildTests=OFF
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: git
         url: https://github.com/nlohmann/json.git
@@ -67,6 +69,8 @@ modules:
 
   - name: rtmidi
     buildsystem: cmake-ninja
+    cleanup:
+      - /share/rtmidi
     config-opts:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     sources:
